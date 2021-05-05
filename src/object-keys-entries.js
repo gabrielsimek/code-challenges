@@ -16,15 +16,15 @@ export function getFilteredKey(obj) {
 
 }
 
-export function getArrayOfKeysAndValues(obj){
+export function getArrayOfKeysAndValues(obj) {
   return Object.entries(obj);
 }
 
 export function sortedArraysByValuesLength(obj) {
-//   const entries = Object.entries(obj);
-//   entries.forEach((item) => {
-//     console.log(item[1]);
-//   });
+  //   const entries = Object.entries(obj);
+  //   entries.forEach((item) => {
+  //     console.log(item[1]);
+  //   });
   return Object.entries(obj)
     .sort((a, b) => {
       return b[1].length - a[1].length;
