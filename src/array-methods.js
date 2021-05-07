@@ -5,3 +5,19 @@ export function howMuchPencil(str) {
   }
   return returnArr;
 }
+
+export function wordsToCharList(arr) {
+  return [...arr];
+
+}
+
+export function listFoods(recipe){
+  let list = Object.values(recipe.ingredients);
+  const anArray = [];
+  for (let item of list){
+  // index of   
+    anArray.push((item.split(' ',).slice(2).join(' ')));
+  }
+    
+  return anArray;
+}
