@@ -39,5 +39,23 @@ export function removeLastCharacters(str, numberOfCharacters){
   } else {
     return str.slice(0, -numberOfCharacters);
   }
+}
+
+export function totalSumCSV(str){
+  let count = 0;
+  for (let number of str.split(',')){
+    count += (Number(number));
+  }
+  return count;
+}
+
+export function removeVowels(str){
+  const anArray = [];
+  for (let item of [...str]){
+    if (!item.match(/[aeiou]/i)){
+      anArray.push(item);
+    } 
+  }
+  return anArray.join('');
  
 }

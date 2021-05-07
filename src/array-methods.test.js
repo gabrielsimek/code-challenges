@@ -1,4 +1,4 @@
-import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastCharacters } from './array-methods';
+import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastCharacters, totalSumCSV, removeVowels } from './array-methods';
 
 const gruffaloCrumble = {
   name: 'How to make a Gruffalo Crumble',
@@ -30,7 +30,7 @@ const gruffaloCrumble = {
   
 
 
-test('It should return a list of shortening words', () => {
+test.skip('It should return a list of shortening words', () => {
   expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
   expect(howMuchPencil('Welcome').length).toStrictEqual(8);
   expect(howMuchPencil('')).toStrictEqual(['']);
@@ -38,28 +38,28 @@ test('It should return a list of shortening words', () => {
 });
 
 
-test('should return a character list', () => {
+test.skip('should return a character list', () => {
   expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
   expect(wordsToCharList('Gregor').length).toStrictEqual(6);
   expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
   expect(wordsToCharList('')).toStrictEqual([]);
 });
 
-test('should return a list of foods ', () => {
+test.skip('should return a list of foods ', () => {
   expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
 //   expect(wordsToCharList('')).toStrictEqual(['']);
 //   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
 });
 
-test('should return a list of steps', () => {
+test.skip('should return a list of steps', () => {
   expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
     //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
 //   expect(wordsToCharList('')).toStrictEqual(['']);
 //   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
 });
 
-test('should word minus the input number of characters', () => {
+test.skip('should word minus the input number of characters', () => {
   expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
 
   expect(removeLastCharacters('hello', -1)).toStrictEqual('hello');
@@ -71,5 +71,24 @@ test('should word minus the input number of characters', () => {
   expect(removeLastCharacters('', 1)).toStrictEqual('');
 
   expect(removeLastCharacters('a, 1')).toStrictEqual('');
+
+});
+
+
+
+test.skip('should return the some of the numbers in the string', () => {
+  expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
+
+  expect(totalSumCSV('147')).toStrictEqual(147);
+});
+
+test('should return a string without vowels', () => {
+  expect(removeVowels('gregor')).toStrictEqual('grgr');
+
+  expect(removeVowels('asdf')).toStrictEqual('sdf');
+
+  expect(removeVowels('why')).toStrictEqual('why');
+
+  
 
 });
