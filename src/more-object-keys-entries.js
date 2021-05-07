@@ -10,7 +10,7 @@ export function updateNumbers(obj) {
   });
   
 
-    //   const anArray = [Object.entries(obj).join()];
+//   const anArray = [Object.entries(obj).join()];
 //   console.log(anArray);
 //   return anArray;
   
@@ -29,6 +29,30 @@ export function totalCharacters(arr) {
 
   });
   return count;
+
+
+
+  let count = 0;
+  //can use object.values on array!!!!!!1
+  Object.values(arr).forEach(character => {
+    count++;
+    if (character.spouse) count++;
+    count += character.children.length;
+  });
+  
+  return count;
+
+  return arr.reduce((acc, current) => {
+    if (current.name) acc += 1;
+    if (current.spouse) acc += 1;
+    if (current.children) acc += current.children.length;
+    return acc;
+  }, 0);
+
+
+
+
+  //let count = 0;
 //   for (let item in arr) {
     //     if (item.name) count++;
     
