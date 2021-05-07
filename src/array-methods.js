@@ -18,6 +18,26 @@ export function listFoods(recipe){
   // index of   
     anArray.push((item.split(' ',).slice(2).join(' ')));
   }
-    
   return anArray;
+}
+
+export function stepActions(recipe){
+     // index of   
+  let steps = Object.values(recipe.steps);
+  const anArray = [];
+
+  for (let item of steps){
+    anArray.push((item.split(' ',).slice(0, 1).join(' ')));
+  }
+  return anArray;
+  
+}
+
+export function removeLastCharacters(str, numberOfCharacters){
+  if (numberOfCharacters < 0) {
+    return str;
+  } else {
+    return str.slice(0, -numberOfCharacters);
+  }
+ 
 }

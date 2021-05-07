@@ -1,4 +1,4 @@
-import { howMuchPencil, wordsToCharList, listFoods } from './array-methods';
+import { howMuchPencil, wordsToCharList, listFoods, stepActions, removeLastCharacters } from './array-methods';
 
 const gruffaloCrumble = {
   name: 'How to make a Gruffalo Crumble',
@@ -45,9 +45,31 @@ test.skip('should return a character list', () => {
 //   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
 });
 
-test('should return a character list', () => {
+test.skip('should return a list of foods ', () => {
   expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
 //   expect(wordsToCharList('')).toStrictEqual(['']);
 //   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
+});
+
+test.skip('should return a list of steps', () => {
+  expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
+    //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
+//   expect(wordsToCharList('')).toStrictEqual(['']);
+//   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
+});
+
+test('should word minus the input number of characters', () => {
+  expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
+
+  expect(removeLastCharacters('hello', -1)).toStrictEqual('hello');
+
+  expect(removeLastCharacters('wowow', -700)).toStrictEqual('wowow');
+
+  expect(removeLastCharacters('hello, 12')).toStrictEqual('');
+
+  expect(removeLastCharacters('', 1)).toStrictEqual('');
+
+  expect(removeLastCharacters('a, 1')).toStrictEqual('');
+
 });
