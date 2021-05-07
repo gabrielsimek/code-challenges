@@ -30,7 +30,7 @@ const gruffaloCrumble = {
   
 
 
-test.skip('It should return a list of shortening words', () => {
+test('It should return a list of shortening words', () => {
   expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
   expect(howMuchPencil('Welcome').length).toStrictEqual(8);
   expect(howMuchPencil('')).toStrictEqual(['']);
@@ -38,21 +38,21 @@ test.skip('It should return a list of shortening words', () => {
 });
 
 
-test.skip('should return a character list', () => {
+test('should return a character list', () => {
   expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
-//   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
-//   expect(wordsToCharList('')).toStrictEqual(['']);
-//   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
+  expect(wordsToCharList('Gregor').length).toStrictEqual(6);
+  expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
+  expect(wordsToCharList('')).toStrictEqual([]);
 });
 
-test.skip('should return a list of foods ', () => {
+test('should return a list of foods ', () => {
   expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
 //   expect(wordsToCharList('')).toStrictEqual(['']);
 //   expect(wordsToCharList('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
 });
 
-test.skip('should return a list of steps', () => {
+test('should return a list of steps', () => {
   expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
     //   expect(wordsToCharList('Welcome').length).toStrictEqual(8);
 //   expect(wordsToCharList('')).toStrictEqual(['']);

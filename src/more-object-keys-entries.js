@@ -29,39 +29,31 @@ export function totalCharacters(arr) {
 
   });
   return count;
+};
 
 
 
-  let count = 0;
   //can use object.values on array!!!!!!1
-  Object.values(arr).forEach(character => {
-    count++;
-    if (character.spouse) count++;
-    count += character.children.length;
-  });
+  //dan solutions:
+  // Object.values(arr).forEach(character => {
+  //   count++;
+  //   if (character.spouse) count++;
+  //   count += character.children.length;
+  // });
   
-  return count;
+  // return count;
 
-  return arr.reduce((acc, current) => {
-    if (current.name) acc += 1;
-    if (current.spouse) acc += 1;
-    if (current.children) acc += current.children.length;
-    return acc;
-  }, 0);
-
-
+  // return arr.reduce((acc, current) => {
+  //   if (current.name) acc += 1;
+  //   if (current.spouse) acc += 1;
+  //   if (current.children) acc += current.children.length;
+  //   return acc;
+  // }, 0);
 
 
-  //let count = 0;
-//   for (let item in arr) {
-    //     if (item.name) count++;
-    
-    //     if (item.spouse) count++;
-    
-    //     if (item.children) count += item.children.length;
-    
-    //   }
-}
+
+
+
 
 export function hasChildrenEntries(arr, character) {
   let hasChildren = false;
