@@ -1,5 +1,6 @@
 export function fiveAndGreaterOnly(arr) {
   return arr.filter(n => n > 5);
+  //if n > 6 return it
 }
 
 export function evensOnly(arr) {

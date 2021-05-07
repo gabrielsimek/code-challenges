@@ -20,6 +20,10 @@ test('Five Characters or Fewer', () => {
   expect(output).toEqual(['dog', 'wolf', 'by', 'eaten']); // assert
 });
 
+//expect.arrayContaining will allow for a pass regardless of the order of the array
+
+//filter returns a copy of the array it is used on
+//.only will allow for only testing one array
 
 test('People in the Illuminati', () => {
   const input = [
