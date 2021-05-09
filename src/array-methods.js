@@ -31,7 +31,7 @@ export function stepActions(recipe){
   return anArray;
   
 }
-
+// can use ..sbstr
 export function removeLastCharacters(str, numberOfCharacters){
   if (numberOfCharacters < 0) {
     return str;
@@ -47,7 +47,7 @@ export function totalSumCSV(str){
   }
   return count;
 }
-
+//can use .replace
 export function removeVowels(str){
   const anArray = [];
   for (let item of [...str]){
