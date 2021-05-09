@@ -8,7 +8,6 @@ export function howMuchPencil(str) {
 
 export function wordsToCharList(arr) {
   return [...arr];
-
 }
 
 export function listFoods(recipe){
@@ -40,7 +39,7 @@ export function removeLastCharacters(str, numberOfCharacters){
     return str.slice(0, -numberOfCharacters);
   }
 }
-
+//can use reduce instead!!!!
 export function totalSumCSV(str){
   let count = 0;
   for (let number of str.split(',')){
@@ -58,4 +57,17 @@ export function removeVowels(str){
   }
   return anArray.join('');
  
+}
+
+export function extractVowels(str){
+  
+  const vowels = [];
+  const consonants = [];
+  for (let item of [...str]){
+    if (item.match(/[aeiou]/i)) vowels.push(item);
+    if (!item.match(/[aeiou]/i)) consonants.push(item);
+  }
+  return [consonants.join(''), vowels.sort().join('')];
+
+  
 }
