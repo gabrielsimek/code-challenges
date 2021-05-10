@@ -14,7 +14,8 @@ export function listFoods(recipe){
   let list = Object.values(recipe.ingredients);
   const anArray = [];
   for (let item of list){
-  // index of   
+  // index of 
+    
     anArray.push((item.split(' ',).slice(2).join(' ')));
   }
   return anArray;
