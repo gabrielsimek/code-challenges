@@ -26,9 +26,15 @@ export function grandTotal(stores){
   
   for (let i = 0; i < stores[0].length; i++){
     let sum = 0;
+
     
     for (let j = 0; j < stores.length; j++) {
       sum = sum + stores[j][i];
+      //starts at stores [0][0] adds to sum
+      //continues to stores [1][0] add to sum repeat
+      //when done push sum to total array
+      //outer loops increments now stores[0][1] add to sum
+      //continue
       
     }
     anArray.push(sum);
