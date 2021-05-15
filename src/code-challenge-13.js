@@ -18,14 +18,19 @@ export const containsW = (str) => {
 };
 
 export const isNum = (input) => {
-  let result = false;
-  input.toString().split('').forEach((item) => {
-    if (Number(item)) {
-      result = true;
-    } 
-  });
+  if (input.toString().match(/[0-9]/g)) return true;
+  return false;
+  //^^Katherines much cleaner solution
+  //
+
+  // let result = false;
+  // input.toString().split('').forEach((item) => {
+  //   if (Number(item)) {
+  //     result = true;
+  //   } 
+  // });
   
-  return result;
+  // return result;
   
 };
 
