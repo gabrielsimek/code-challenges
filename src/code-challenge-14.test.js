@@ -18,14 +18,14 @@ test('should return true if the input 4 long', () => {
    
 });
 
-// test('should return true if the input between 5 and 10 ong', () => {
+test('should return true if the input between 5 and 10 ong', () => {
 
-//   expect(validateWord('asd')).toStrictEqual(false);
-//   expect(validateWord('asdfqwer')).toStrictEqual(true);
-//   expect(validateWord('asdfasdfasdfasdfasdfasdf')).toStrictEqual(false);
+  expect(validateWord('asd')).toStrictEqual(false);
+  expect(validateWord('asdfqwer')).toStrictEqual(true);
+  expect(validateWord('asdfasdfasdfasdfasdfasdf')).toStrictEqual(false);
   
    
-// });
+});
 
 test('return true if string has on or more letters followed by one or more digits', () => {
 

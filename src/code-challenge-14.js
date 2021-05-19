@@ -9,10 +9,10 @@ export const validatePin = (pin) => {
   else return false;
 };
 
-// export const validateWord = (word) => {
-//   if (word.match(/\d{5,10}/g)) return true;
-//   else return false;
-// };
+export const validateWord = (word) => {
+  if (word.match(/\b\w{5,10}\b/)) return true;
+  else return false;
+};
 
 export const hasNumber = (string) => {
   if (string.match(/^\w+\d+$/gi)) return true;
