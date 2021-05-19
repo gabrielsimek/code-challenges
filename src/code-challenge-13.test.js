@@ -91,3 +91,37 @@ describe('Testing challenge 1', () => {
   
   });
 });
+
+
+// describe.skip('(Stretch) challenge 7', () => {
+//   test('It should return true if Oct, oct, or October', () => {
+//     expect(matchMonth('Oct')).toStrictEqual(true);
+//     expect(matchMonth('oct')).toStrictEqual(true);
+//     expect(matchMonth('October')).toStrictEqual(true);
+//     expect(matchMonth('october')).toStrictEqual(true);
+//     expect(matchMonth('November')).toStrictEqual(false);
+//     expect(matchMonth('nov')).toStrictEqual(false);
+//     expect(matchMonth('123')).toStrictEqual(false);
+//     expect(matchMonth('octob')).toStrictEqual(false);
+//   });
+// });
+// describe.skip('(Stretch) challenge 8', () => {
+//   test('Return all words with a space following', () => {
+//     expect(noPunctuation('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.'))
+//       .toStrictEqual(['Lorem ', 'ipsum ', 'dolor ', 'sit ', 'consectetur ', 'adipiscing ', 'Cras ', 'lacinia ', 'vel ', 'massa ', 'sed ', 'Nunc ', 'faucibus ', 'iaculis ', 'a ', 'scelerisque ', 'enim ', 'condimentum ', 'Aenean ', 'ac ', 'scelerisque ', 'et ', 'pharetra ']);
+//   });
+// });
+// describe.skip('(Stretch) challenge 9', () => {
+//   test('Replace vowels with underscore', () => {
+//     expect(hangman('This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!'))
+//       .toStrictEqual('Th_s _s _ r_g_x ch_ll_ng_. W_ _r_ try_ng t_ cr__t_ _ h_ngm_n phr_s_ wh_r_ _ll _f th_ v_w_ls _r_ m_ss_ng!');
+//     expect(hangman('I wAnt them all tO bE removed and replaced with Underscores.'))
+//       .toStrictEqual('_ w_nt th_m _ll t_ b_ r_m_v_d _nd r_pl_c_d w_th _nd_rsc_r_s.');
+//   });
+// });
+// const seashells = `She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I'm sure she sells seashore shells.`;
+// describe.skip('(Stretch) challenge 10', () => {
+//   test('Grab sells, seashells, shells', () => {
+//     expect(findShells(seashells)).toStrictEqual(['sells', 'seashells', 'shells', 'sells', 'seashells', 'sells', 'shells', 'sells', 'shells']);
+//   });
+// });

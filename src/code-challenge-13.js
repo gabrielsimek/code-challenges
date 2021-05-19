@@ -18,16 +18,24 @@ export const containsW = (str) => {
 };
 
 export const isNum = (input) => {
-  let result = false;
-  input.toString().split('').forEach((item) => {
-    if (Number(item)) {
-      result = true;
-    } 
-  });
-  
-  return result;
-  
+  if (input.toString().match(/[0-9]/g)) return true;
+  return false;
+  //^^Katherines much cleaner solution
+  //
+//export function isNum(data){
+ // return /\d/.test(data);
 };
+
+  // let result = false;
+  // input.toString().split('').forEach((item) => {
+  //   if (Number(item)) {
+  //     result = true;
+  //   } 
+  // });
+  
+  // return result;
+  
+//};
 
 export const containsWorld = (input) => {
   if (input.match(/world/g)) return true;
@@ -36,20 +44,26 @@ export const containsWorld = (input) => {
 };
 
 export const isCapitalized = (str) => {
-  
-  const anArry = str.replace(/[,).\\-]/g, '').split(' ').filter((item) => {
-    return item[0].match(/[A-Z]/);
+  return str.match(/[A-Z]\w+/g) || [];
+  // const anArry = str.replace(/[,).\\-]/g, '').split(' ').filter((item) => {
+  //   return item[0].match(/[A-Z]\w+/g);
+  //   //keep looking for A-z until you get to a non letter character.
     
-  });
-  return anArry;
+  // });
+  // return anArry;
 
 
 };
 
 export const citiesAtoJ = (arr) => {
   return arr.filter((item) =>{
-    return item[0].match(/[A-J]/g);
+    
+    return item[0].match(/[A-J]/);
   }
   );
   
+};
+export const matchMonth = (str) => {
+  return /^[Oo]ct(ober)?$/.test(str);
+  ;
 };
